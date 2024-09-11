@@ -1,4 +1,5 @@
 
+
 (function() {
   "use strict";
 
@@ -34,6 +35,7 @@
   }
   mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
+
   document.querySelectorAll('#navmenu a').forEach(navmenu => {
     navmenu.addEventListener('click', () => {
       if (document.querySelector('.mobile-nav-active')) {
@@ -43,6 +45,7 @@
 
   });
 
+ 
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
     navmenu.addEventListener('click', function(e) {
       e.preventDefault();
@@ -52,6 +55,7 @@
     });
   });
 
+ 
   const preloader = document.querySelector('#preloader');
   if (preloader) {
     window.addEventListener('load', () => {
@@ -59,6 +63,7 @@
     });
   }
 
+ 
   let scrollTop = document.querySelector('.scroll-top');
 
   function toggleScrollTop() {
@@ -77,6 +82,7 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
+  
   function aosInit() {
     AOS.init({
       duration: 600,
@@ -87,13 +93,15 @@
   }
   window.addEventListener('load', aosInit);
 
-  
+ 
   const glightbox = GLightbox({
     selector: '.glightbox'
   });
 
+ 
   new PureCounter();
 
+ 
   function initSwiper() {
     document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
       let config = JSON.parse(
@@ -109,7 +117,6 @@
   }
 
   window.addEventListener("load", initSwiper);
-
 
   document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle').forEach((faqItem) => {
     faqItem.addEventListener('click', () => {
@@ -133,7 +140,7 @@
     }
   });
 
-  
+ 
   let navmenulinks = document.querySelectorAll('.navmenu a');
 
   function navmenuScrollspy() {
